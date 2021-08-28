@@ -5,3 +5,10 @@ source /home/akemy/workspace/franq/venv/bin/activate
 
 subindo a aplicação 
 python manage.py runserver
+
+python manage.py migrate
+
+
+super user 
+login: adm 
+senha: adm
