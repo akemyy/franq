@@ -10,5 +10,9 @@ python manage.py migrate
 
 
 super user 
-login: adm 
-senha: adm
+login: admin 
+senha: admin
+
+
+
+to do tirar o garagens com M
