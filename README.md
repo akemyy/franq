@@ -44,3 +44,4 @@ TO DO
 - criar o acesso do consumidor
 - implementar o rest_framework.permissions
 - melhorar o readme 
+- ao criar pessoa criar a garagem

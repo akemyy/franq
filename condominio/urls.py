@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from pessoa.views import PessoaViewSet, VeiculoViewSet, GaragemViewSet, ListaVeiculosGaragem
+from api.views import PessoaViewSet, VeiculoViewSet, GaragemViewSet, ListaVeiculosGaragem
 from rest_framework import routers
 
 router = routers.DefaultRouter()
