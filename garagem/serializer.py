@@ -18,7 +18,7 @@ class GaragemSerializer(serializers.ModelSerializer):
         exclude = []
 
 
-class ListaVeiculosGaragemSerializer(serializers.ModelSerializer):
+class ListaVeiculosPessoaSerializer(serializers.ModelSerializer):
     veiculo_placa = serializers.ReadOnlyField(source='veiculo.placa')
     class Meta:
         model = Garagem

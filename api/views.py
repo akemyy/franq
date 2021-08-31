@@ -3,7 +3,7 @@ from rest_framework import viewsets, generics
 from pessoa.models import Pessoa
 from garagem.models import Veiculo, Garagem
 from pessoa.serializer import PessoaSerializer
-from garagem.serializer import VeiculoSerializer, GaragemSerializer, ListaVeiculosGaragemSerializer
+from garagem.serializer import VeiculoSerializer, GaragemSerializer, ListaVeiculosPessoaSerializer
 
 class VeiculoViewSet(viewsets.ModelViewSet):
     """Exibindo todas as veiculos"""
@@ -21,12 +21,12 @@ class PessoaViewSet(viewsets.ModelViewSet):
     serializer_class = PessoaSerializer
 
 
-class ListaVeiculosGaragem(generics.ListAPIView):
+class ListaVeiculosPessoa(generics.ListAPIView):
     """Listando os veiculos de uma garagem"""
     def get_queryset(self):
-        queryset = Garagem.objects.filter(veiculo_id=self.kwargs['pk'])
+        queryset = Garagem.objects.filter(email=self.kwargs['pk'])
         return queryset
-    serializer_class = ListaVeiculosGaragemSerializer
+    serializer_class = ListaVeiculosPessoaSerializer
     
     
 #class AddVeiculosGaragem(generics.ListAPIView):
