@@ -35,13 +35,13 @@ http://localhost:8000/garagens/
 http://localhost:8000/pessoas/
 
 
+Atualizando o requirements.txt
+pip freeze > requirements.txt
+
+
 TO DO 
 - melhorar o visualiza veiculos de uma garagem 
-- possibilitar criar mais de um veiculo na mesma garagem 
-- visualização de veiculos de uma pessoa 
 - implementar caso seja moto para o usuario coloque o modelo ao invés da cor
-- visualização apenas das garagens ativas
 - criar o acesso do consumidor
-- implementar o rest_framework.permissions
 - melhorar o readme 
 - ao criar pessoa criar a garagem

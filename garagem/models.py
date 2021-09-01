@@ -10,7 +10,7 @@ class Veiculo(models.Model):
     modelo = models.CharField(max_length=200, blank=True)
     ano_veiculo = models.IntegerField()
     cor = models.CharField(max_length=200, blank=True)
-    placa = models.CharField(max_length=10, blank=False, null=False)
+    placa = models.CharField(max_length=10, blank=False, null=False, unique=True)
     data_cadastro = models.DateTimeField(default=datetime.now, blank=True)
     visivel = models.BooleanField(default=True)
     def __str__(self):
@@ -22,8 +22,8 @@ class Garagem(models.Model):
     
     ativa = models.BooleanField(default=True)
     veiculo = models.ForeignKey(Veiculo, on_delete=models.SET_NULL, blank=True, null=True)
-    telefone = models.IntegerField()
-    email = models.CharField(max_length=500)
+    telefone = models.IntegerField(unique=True)
+    email = models.EmailField(blank=False, unique=True)
     def __str__(self):
         return self.id
     
