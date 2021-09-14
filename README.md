@@ -29,19 +29,20 @@ python manage.py createsuperuser
 
 Rotas disponiveis 
 http://localhost:8000/
-http://localhost:8000/admin/login/?next=/admin/
+http://localhost:8000/admin
 http://localhost:8000/veiculos/
 http://localhost:8000/garagens/
 http://localhost:8000/pessoas/
+Busca o veiculo de uma pessoa
+http://localhost:8000/pessoa/{email@pessoa.com}/veiculos/'
 
 
 Atualizando o requirements.txt
 pip freeze > requirements.txt
 
+instalando dependencias 
+pip install -r requirements.txt
 
-TO DO 
-- melhorar o visualiza veiculos de uma garagem 
-- implementar caso seja moto para o usuario coloque o modelo ao invés da cor
-- criar o acesso do consumidor
-- melhorar o readme 
-- ao criar pessoa criar a garagem
+internacionalizado
+cache
+credencial

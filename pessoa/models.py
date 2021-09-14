@@ -19,3 +19,4 @@ class Pessoa(models.Model):
     email = models.EmailField(blank=False, unique=True)
     data_cadastro = models.DateTimeField(default=datetime.now, blank=True)
     visivel = models.BooleanField(default=True)
+    foto = models.ImageField(blank=True)
